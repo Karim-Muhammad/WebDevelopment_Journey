@@ -1,0 +1,92 @@
+.about .section-header {text-align: left;}
+.about .section-header .line {margin: 0px; margin-top: 15px;
+margin-left: 7px;
+}
+.about .about-content {
+    overflow: hidden;
+    color: var(--darkMainColor);
+    /* background-color: #000000; */
+}
+.about .img-about-us {
+    text-align: right;
+    /* background-color: #0000aa; */
+    width: 50%;
+    float: left;
+}
+.about .img-about-us img {
+    width: 100%;
+    height: 100%;
+}
+.about .img-about-us .switch-img {
+    list-style: none;
+    text-align: center;
+}
+.about .img-about-us .switch-img li{
+    border-radius: 7px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #e2e2e2;
+}
+.about .img-about-us .switch-img li.active{
+    background-color: var(--mainColor);
+}
+.about .img-about-us .switch-img li:hover{
+    background-color: var(--mainColor);
+}
+.about .content-about-skills {
+    line-height: 2;
+    height: 100%;
+    width: 50%;
+    /* background-color: #00aa00; */
+    padding: 20px;
+    float: left;
+}
+.about .content-about-skills .about-describtion {
+    margin-bottom: 20px;
+}
+.about .content-about-skills .list-skills {
+    list-style-type: none;
+}
+.about .content-about-skills .list-skills li::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-size: cover;
+	background-image: url(https://img.icons8.com/fluency-systems-regular/344/check-all.png);
+	margin-right: 7px;
+}
+.about .content-about-skills .list-skills li:hover::before {
+	content: "";
+	background-image: url(https://img.icons8.com/ios-glyphs/344/check-all.png);
+	width: 15px;
+	height: 15px;
+}
+.about .content-about-skills .list-skills li::before {
+	content: "";
+	background-image: url(https://img.icons8.com/ios-glyphs/344/check-all.png);
+	width: 15px;
+	height: 15px;
+}
+.about .about-content .content-about-skills ul { /* 2# way */
+    list-style-type: none;
+}
+.about .about-content .content-about-skills ul li {
+    width: 40%;
+}
+.about .about-content .content-about-skills ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.about .feature { /* 3# way */
+    font-size: 10px;
+    color: black;
+    margin-top: 9px;
+    width: 100%;
+    /* background-color: #5686A7; */
+    padding: 10px;
+    margin-right: 2px;
+}
+.about .feature p {font-size: 12px; display:inline-block;}
+.about .feature i {font-size: 12px;}

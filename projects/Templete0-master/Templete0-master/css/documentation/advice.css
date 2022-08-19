@@ -1,0 +1,35 @@
+/* Common style */
+    /*
+        1- hover buttons
+        2- hover affect 1(left to right)
+        3- hover affect 2(Up to bottom)
+        4- Section header
+        5- container center 
+            . we noted the content website start on center does not begin with margins
+            > لاحظنا أن المحتوي مش بادئ من بداية الصفحة وانما بادئ كله في المنتصف
+            >> دا أسمه الcontainer بحيث اضيف في المحتوي علشان اسنتره
+        6- padding Section
+    */
+/* 12:00 video [Unique Coders Academy] */
+    /* 
+        Header consist of:
+            1- Logo [img]
+            2- Links
+    */
+
+    /* organize files in head
+        <!-- fonts -->
+
+        <!-- CSS libraries -->
+
+        <!-- CSS files -->
+
+    */
+
+    /* Technique for end each section - element 
+        div class "parent" {
+            div class "child" {
+
+            } <!-- /.child -->
+        } <!-- /.parent -->
+    */

@@ -1,0 +1,56 @@
+/* Team Section */
+section.teams {
+    padding: 0px;
+    height: 50vh;
+    background-image: url(../images/background/background3.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section.teams .overlay {
+    height: 50%;
+}
+section.teams .container {
+    padding-top: 139px;
+}
+section.teams .teams-content {
+    /* margin-top: 30px; container move with it*/
+    position: relative;
+    /* left: 50%;
+    transform: translate(-50%, 50%); */
+    /* height: 50vh; */
+    overflow: hidden;
+}
+section.teams .one-of-team {
+    float: left;
+    background-color: #00000069;
+    padding: 10px;
+    width: calc(90%/2);
+    margin-right: 5%;
+}
+section.teams .one-of-team:nth-child(2) {margin:0px}
+.teams .profile {
+    overflow: hidden;
+    background-color: #b2bdc536;
+    margin-bottom: 20px;
+}
+section.teams .profile img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    float: left;
+}
+/* section.teams .profile img + * {
+} */
+.teams .profile .about-profile {
+    float: left;
+    margin-left: 17px;
+}
+.teams .profile .author {
+    display: block;
+    color: var(--lightHackerColor);
+    margin-top: 1.5rem;
+    margin-bottom: 10px;
+    font-family: monospace;
+    font-weight: 700;
+}

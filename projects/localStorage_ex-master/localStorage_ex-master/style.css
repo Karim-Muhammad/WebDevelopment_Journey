@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background-color: #999;
+    width: 80%;
+    margin: 70px auto;
+    padding: 20px;
+}
+.container .input-content {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.container .input-content input {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+}
+.container .input-content #inputKey {
+    border: 7px solid #7f79e7;
+    /* box-shadow: 0px 2px 12px 5px #7f79e799; */
+}
+.container .input-content #inputValue {
+    border: 7px solid #7ff9e7;
+}
+.container .input-content input:focus {
+    outline: none;
+}
+.container .control-content {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.container .control-content span {
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, var(--c), rgba(255 255 255 / 0.9));
+    background-size: 200% 100%;
+    background-position: 400% 100%;
+    /* background-color: var(--c); */
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.container .control-content span:hover {
+    font-weight: 500;
+    transform: scale(0.95);
+    background-position: 200% 100%;
+}
+.container .result-content {
+    background-color: aliceblue;
+    padding: 20px;
+}
+.container .result-content > span span {
+    font-weight: 700;
+    color: #339ef7;
+}

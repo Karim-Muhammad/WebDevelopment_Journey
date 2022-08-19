@@ -1,0 +1,43 @@
+.home {
+    background-image: url(https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+/* used more [common]*/
+
+.home .home-content {
+    /* background-color: rgb(105, 105, 100); */
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
+}
+.home .home-content .home-content-title {
+    color: #4a81a7;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3em;
+}
+.home-content-describtion {
+    color: azure;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    margin: 10px 0px;
+    font-style: italic;
+}
+.btn-get-start {
+    background-color: #4a81a7;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-right: 7px;
+}
+.btn-learn-more {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

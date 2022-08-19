@@ -1,0 +1,24 @@
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <!-- don't name is services-title becuase this part will repeat over again to other sections -->
+            <div class="section-title">
+                <h3 class="services-title">Services</h3>
+                <span class="line"></span>
+            </div><!-- /.section-title -->
+            <div class="services-boxes">
+                <div class="service-box">
+                    <img src="" alt="" class="service-img">
+                    <p class="describtion-service"></p>
+                </div>
+                <div class="service-box">
+                    <img src="" alt="" class="service-img">
+                    <p class="describtion-service"></p>
+                </div>
+                <div class="service-box">
+                    <img src="" alt="" class="service-img">
+                    <p class="describtion-service"></p>
+                </div><!-- /.service-box -->
+            </div><!-- /.services-boxes -->
+        </div><!-- /.container -->
+    </section><!-- /.services -->

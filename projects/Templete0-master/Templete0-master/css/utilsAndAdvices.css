@@ -1,0 +1,34 @@
+/* I try make built in classes for Html
+becuase many classes in html is ok, but line by line in CSS
+this is decrease performance of Website
+so the ready classes is good way
+[Unique Coderz Academy]
+(advices for Refactor of code )
+(reusable > speparate section styles)
+(general > make built in classes)
+
+when i encounter some error in specific section i go to the its file
+and fix bugs and then if i copy them in css.css or use the separte files
+
+separate files is ok way, in the last we use sometings is called (gulp, webpack)
+to compress all these files to decrease loading during upload the project
+
+- and don't forget make classes for for example (for hero-img, uppercase, float)
+- to when i want html block apply on it something i put only class on it to apply
+not needed to write it again for specific block in html
+
+Video 15 so amazing, and there are many advices realy awesome!!!!!
+    i want review again and again
+
+*/
+.mg-b-10 {margin-bottom: 10px;}
+.mg-b-20 {margin-bottom: 20px;}
+.mg-b-30 {margin-bottom: 30px;}
+.pd-y-10 {padding: 10px 0;}
+.pd-y-20 {padding: 20px 0;}
+.pd-10 {padding: 10px;}
+.capital {text-transform: capitalize;}
+.uppercase {text-transform: uppercase;}
+.lst-style{list-style-type: none;}
+.overflow-hidden {overflow: hidden;}
+.float-left {float: left;}

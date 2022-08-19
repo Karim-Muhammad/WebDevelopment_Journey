@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$mainColor:rgb(167, 153, 75); /*Logo - titles - hover-btn - menu*/
+$colorIntro:#f1db5a; /*Web Designer*/
+$color-btn:rgb(231, 184, 63); /*Color of btn-intro & icons-projects*/
+$main-bgColor:aliceblue;
+
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0px;
+    padding:0px;
+    scroll-behavior:smooth;
+    box-sizing: border-box;
+}
+/*Make Variables*/
+:root {
+    --mainColorIdentity:rgb(167, 153, 75);
+}
+@import "_headerSty.scss"; /*Header Styling in this*/
+@import "_introWpStyle.scss";/*Style intro web page*/
+/* Project Section Style*/
+.title { /*you can make specify like this section.cards .title but i want in general any title apply (boor reusable)*/
+    display:flex;
+    justify-content: center;
+    margin-bottom: 17px;
+    font-weight:700;
+    font-size:2.2em;
+    color:$mainColor; /*Previous Color rgb(200, 182, 81)*/
+}
+/* Content Project this can use it as reusable but i made mistake (importance of think of design)*/
+.content {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .card {
+        background-color:#fefefe;
+        width:23.23em;
+        box-shadow: 0px 5px 25px rgba(1 1 1/ 15%);
+        padding:25px;
+        margin: 10px;
+        transition: 0.7s ease;
+        @extend %transition;
+        &:hover {
+            background-color: white;
+            @extend %transform;
+        }
+        .info {
+            text-align: center;
+        }
+        .icon {
+            color:$color-btn;
+            font-size:5.29em;
+            text-align: center;
+            margin-bottom: 7px;
+        }
+        h3 {
+            color:$color-btn;
+            font-size:1.7em;
+            margin-bottom: 7px;
+        }
+    }
+}
+/* Courses Section Style */
+section.courses {
+    background-color:black; /*rgb(167, 153, 75)*/
+    .content {
+        margin-top: 30px;
+        .courses-card{ /*Like Exact .content for cards projects above but i made mistake*/
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .course-card {
+        background-color: #fefefe;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        min-height: 14em;
+        width: 20em;
+        margin: 20px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        @extend %transition;
+        &:hover {
+            @extend %transform;
+        }
+        .course-image img {
+            width:100%;
+        }
+        &:hover .course-image img{
+            opacity: 0.9;
+        }
+        .course-info {
+            padding: 1em;
+            p {
+                font-size: 0.8em;
+                color: #000;
+            }
+            .course-title {
+                display: flex;
+                justify-content: space-between;
+                font-weight: 700;
+                margin-top: 10px;
+                text-transform: uppercase;
+                a {
+                    text-decoration: none;
+                    color:$mainColor;
+                    &:hover {
+                        color:$color-btn;
+                    }
+                }
+            }
+        }
+    }
+}
+/* .course-card .course-image { 
+    border: 2px solid red;
+} */
+/*Look the compare between Sass and css below*/
+    /*Contact Section Style*/
+.contact h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-weight:700;
+    font-size:2.2em;
+    color:$mainColor; /*previous color rgb(200, 182, 81)*/
+}
+.contact .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.contact .content .contct  {
+    margin: 10px;
+    background-color: #fefefe;
+    box-shadow: 0px 5px 25px rgba(1 1 1/15%);
+    width: 23.23em;
+    padding: 25px;
+    @extend %transition;
+}
+.contact .content .contct:hover  {
+    @extend %transform;
+}
+.contact .content .contct h3 {
+    color: $color-btn;
+    text-align: center;
+    margin: 10px;
+    font-size: 1.33em;
+    font-weight: 700;
+}
+.contact .content .contct p {
+    color: $color-btn;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+.contact .content .contct .icon  {
+    color:$color-btn;
+    text-align: center;
+    font-size: 2.13em;
+}
+@import "progressStyle.scss";
+footer {
+    background-color:black;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    padding: 2em;
+}
+footer p {
+    font-size: 1.3em;
+}
+footer p span {
+    font-weight: 800;
+    color:rgb(167, 153, 75);
+}
+
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+    .header a.logo {
+        font-size:1.4em;
+    }
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+    section{
+        padding: 80px 20px;
+    }
+    section.main .intro h2 span {
+        font-size:1.7em;
+    }
+    section.main .intro h3 {
+        line-height: 40px;
+        margin-bottom: 4px;
+        font-size:1.7em;
+    }
+    .main-content h2{
+        font-size: 1em;
+    }
+
+    .main-content h3{
+        font-size: 1.6em;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    /*Responsive not yet*/
+}
+
+/*Place holder selector*/
+%transform {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+%transition {
+    transition: 0.7s ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+}
+/*The difference between .transform and %transform that the latter no render in website
+and the another if you actually want use the reference class as element too
+*/

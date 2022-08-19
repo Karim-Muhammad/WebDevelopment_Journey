@@ -1,0 +1,72 @@
+/* employyes style */
+/* section.employees {
+    /* background-color: #0Fa;
+} */
+section.employees {
+    height: 50vh;
+    padding-top: 50px;
+}
+section.employees .emp {
+    padding-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(223, 224, 223, 0.448);
+    width: calc(70%/3);
+    float: left;
+    /* position: relative; */
+}
+section.employees .emp:nth-child(2) {
+    margin: 0px 15%;
+}
+section.employees .emp img {
+    width: 100%;
+    margin-bottom: 20px;
+    transition: opacity 1.5s;
+    /* transition-delay: 2s; */
+}
+section.employees .emp:hover img {
+    opacity: 0.7;
+}
+section.employees .emp .info {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    margin-top: 10px;
+    visibility: hidden;
+    opacity:0;
+    transition: opacity 1s;
+    line-height: 8;
+}
+section.employees .emp:hover .info {
+    visibility: visible;
+    opacity: 1;
+}
+section.employees .emp .info a {
+    text-decoration: none;
+}
+section.employees .emp .info i{
+    font-size: 1.3rem;
+    display: block;
+    background-color: var(--grayEmp);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+}
+section.employees .emp .info i:hover {
+    color: var(--grayEmp);
+    background-color: #fff;
+}
+section.employees .emp .name {
+    /* transition: color 2.5s; */
+    transition: color 0.3s;
+    transition-delay: 1s;
+    color:var(--darkMainColor);
+}
+section.employees .emp .job {
+    font-family: monospace;
+    color:#223c51;
+}
+.employees .emp:hover .name {
+    color: #ffffff;
+}

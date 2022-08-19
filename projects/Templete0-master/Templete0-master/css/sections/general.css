@@ -1,0 +1,124 @@
+/* common/ general styles */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root { /* :root equal to html */
+    /* this is the place which search in variables where is*/
+    --mainColor:#4A81A7;
+    --darkMainColor:#28516f;
+    --lightMainColor:#98caf4;
+    --hackerColor:#419a41a7;
+    --lightHackerColor:#36ff36;
+    --bg-color:#111;
+    --grayEmp:#424b52b0;
+
+}
+.container {
+    width: 80%;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    font-size: 0px;
+}
+section .container {
+    font-size: 16px;
+}
+.clear {clear: both;}
+.overlay {
+    position: absolute;
+    background-color: #16487755;
+    width: 100vw;
+    height: 100vh;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn { /* Common */
+    border: 0px;
+    border-radius: 7px;
+    width: 170px;
+    height: 70px;
+    font-size: 1.1rem;
+    margin: 10px 0px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+.opacity-effect {
+    opacity: 1;
+    transition: opacity 1s;
+}
+.opacity-effect:hover {
+    opacity: 0.77;
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 120px;
+}
+section:nth-child(even) {
+    background-color: #F1F1F1;
+}
+div.section-header {
+    text-align: center;
+}
+div.section-header .section-title {
+    font-size: 3em; /* take care */
+    font-family: 'Times New Roman', serif;
+    text-transform: capitalize;
+    color: var(--mainColor);
+}
+div.section-header .line {
+    display: block;
+    background-color: var(--mainColor);
+    width: 70px;
+    height: 4px;
+    margin: 10px auto 80px;
+}
+/* effect box */
+.ltr-effect {
+    position: relative;
+}
+.ltr-effect::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color:rgba(215, 227, 250, 0.23);
+    transition: width 0.5s;
+}
+.ltr-effect:hover::before {
+    width: 100%;
+}
+/* top to bottom effect */
+.ttb-effect {
+    position: relative;
+}
+.ttb-effect::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 0%;
+    background-color:rgba(9, 22, 47, 0.406);
+    transition: height 1.2s;
+}
+.ttb-effect:hover::before {
+    height: 100%;
+}
+/* some built in styles */
+.pd-y {padding: 10px 0px;}
+.mg-b {margin-bottom: 10px;}
+.mg-5 {margin: 5px;}

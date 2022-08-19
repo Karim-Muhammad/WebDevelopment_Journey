@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    /** It Was affect on font margin or padding, i was stuck with line-height of element to center it */
+    /** i couldn't center it perfectly, because of font type! */
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+
+/** Task Container */
+.todo-container {
+    width: 80%;
+    margin: 30px auto 0;
+    background-color: #f6f6f6;
+}
+.todo-container .tasks-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #009866;
+}
+
+.todo-container .tasks-add * {
+    display: block;
+}
+
+.todo-container .tasks-add input {
+    font-size: 21px;
+    padding: 10px 15px;
+    background-color: rgba(255,255,255, 0.3);
+    width: calc(100% - 15px);
+    border: none;
+}
+.todo-container .tasks-add input:focus {
+    outline: none;
+}
+.todo-container .tasks-add span {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    position: relative;
+    right: 20px;
+    /* font-size: 20px; */
+    background-color: aliceblue;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.todo-container .tasks-add span:hover {
+    transform: scale(0.9);
+    /* transform: rotate(90deg); */
+}
+
+.todo-container .tasks-content {
+    padding: 10px;
+}
+.todo-container .tasks-content .no-tasks {
+    color: #777;
+}
+/** Style task */
+.tasks-content > span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10px;
+    background-color: white;
+}
+.tasks-content > span.done{
+    text-decoration: line-through;
+}
+.tasks-content > span:not(:last-child) {
+    margin: 0 0 10px;
+}
+.tasks-content > span .delete {
+    text-transform: capitalize;
+    background-color: #ef5959;
+    color: #FFF;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.tasks-stats {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tasks-stats .tasks-counter,
+.tasks-stats .tasks-completed {
+    text-transform: capitalize;
+    font-size: 12px;
+}
+.tasks-stats .tasks-counter span {
+    padding: 2px 10px;
+    border-radius: 4px;
+    background-color: #ef5959;
+    color: #FFF;
+}
+.tasks-stats .tasks-completed span {
+    padding: 2px 10px;
+    border-radius: 4px;
+    background-color: #00EEFF;
+    color: #FFF;
+}

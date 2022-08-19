@@ -1,0 +1,107 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(31, 31, 31);
+}
+
+.slider-container {
+    background-color: gray;
+    width: 70vw;
+    height: 70vh;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.slider-container .slider-number {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: gainsboro;
+    padding: 10px;
+    border-radius: 10%;
+    z-index: 3;
+}
+
+.slider-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.8) translateY(-10px);
+    /* left: 0; */
+    /* right: -710px; */
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s, transform 0.6s;
+}
+
+.slider-container img.active {
+    /* right: 0;
+    left: 0; */
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.slider-control {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+}
+
+.slider-control span:not(:nth-child(2)) {
+    cursor: pointer;
+    user-select: none;
+    text-transform: capitalize;
+    font-weight: 600;
+    display: block;
+    background-color: rgb(54, 52, 52);
+    color: rgb(203, 73, 73);
+    padding: 10px 20px;
+
+}
+
+.slider-control span:nth-child(2) {
+    display: block;
+}
+
+.slider-control span.left.disabled,
+.slider-control span.right.disabled {
+    background-color: rgb(211, 211, 211);
+    cursor: not-allowed;
+}
+
+.slider-control span.indicators ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.slider-control span.indicators ul li {
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 20px;
+    background-color: rgb(220, 227, 233);
+    /* border-radius: 50%; */
+}
+
+.slider-control span.indicators ul li.active {
+    background-color: rgb(61, 32, 32);
+    color: rgb(185, 185, 185);
+}

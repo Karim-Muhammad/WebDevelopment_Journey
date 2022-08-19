@@ -1,0 +1,404 @@
+/* Header Modify Style */
+div.header ul li {
+    background-color: rgb(88, 81, 70);
+}
+.header .container > ul li::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #e08327;
+    transition: all 0.6s;
+}
+.header .container > ul li:hover::after {
+    width: 100%;
+}
+/* Modify general style */
+section {
+    width: 100%;
+    height: 100%;
+}
+div.section-header .section-title {
+    font-size: 2.5em;
+    text-align: left;
+}
+div.section-header .line {
+    margin-bottom: 11px;
+    width: 20%;
+    margin-left: 0px; /* margin-left:auto; does not work*/
+}
+/* header style */
+.div-bread-crump .container {
+    overflow: hidden;
+    /* background: red; */
+}
+.header {
+    position: relative;
+}
+/* breadcrump navigation STYLE */
+.div-bread-crump {
+    background-color:#f5f6f6;
+    height: 10vh;
+    margin-bottom: 20px;
+}
+.div-bread-crump h1 {
+    /* vertical-align: middle; */
+    /* background-color: aliceblue; */
+    margin-top: 20px;
+    font-size: 2.7rem;
+    width: 50%;
+    color: black;
+    float: left;
+}
+.div-bread-crump ul.breadcrump{
+    /* background-color: rgb(255, 145, 0); */
+    /* overflow: hidden; */
+    /* margin-right: auto; */
+    text-align: right;
+    width: 50%;
+    float: left;
+}
+.div-bread-crump .container ul li{
+    /* background-color: beige; */
+    color: black;
+    display: inline-block;
+    font-size: 20px;
+    margin: 30px 10px;
+}
+.div-bread-crump ul li + li::before{
+    content: "/";
+    padding: 4px;
+    /*font-size: 4px; prevent making this ::before*/
+    color: #000000;
+}
+.div-bread-crump ul li a{
+    text-decoration: none;
+}
+/* Content */
+section.content {
+    /* background-color: antiquewhite; */
+    overflow: hidden;
+}
+/* Left Content */
+section.content .left-content {
+    /* background-color: rgb(104, 96, 86); */
+    margin-right: 10px;
+    float: left;
+    width: 70%;
+    font-size: 20px;
+}
+section.content .left-content .blog-img{
+    /* background-color: rgb(230, 217, 201); */
+}
+section.content .left-content .blog-img img{
+    width: 100%;
+}
+section.content .left-content .blog-img ul {
+    margin: 20px 0;
+}
+section.content .left-content .blog-img ul li{
+    display: inline-block;
+    color: var(--mainColor)
+}
+section.content .left-content .blog-img ul li+li{ /* to style other elements except first element */
+    margin-left: 20px;
+}
+section.content .left-content .pcontent .title-blog {
+    color: black;
+    margin-bottom: 20px;
+}
+section.content .left-content .pcontent .disc-blog {
+    color: var(--mainColor);
+    line-height: 1.5;
+}
+section.content .left-content .pcontent + .tags-blog ul{
+    display: inline-block;
+    list-style-type: none;
+}
+/*
+section.content .left-content .pcontent + .tags-blog ul li{
+    display: inline-block;
+    margin-left: 20px;
+    background-color: ;
+}//Replaced this with tag class to use it in HTML
+*/
+/* author style */
+.author {
+    /* background-color: #9090e8; */
+    border: 1px solid #d8d223;
+    color: black;
+    padding: 20px;
+}
+.author .img-author {
+    /* background-color: #515173; */
+    /* padding: 10px; */
+    float: left;
+    width: 20%;
+}
+.author .img-author img{
+    width: 100%;
+}
+.author .about-author {
+    /* background-color: #242426; */
+    padding: 10px 0;
+    overflow: hidden;
+    width: 80%;
+    float: left;
+}
+.author .about-author .name-author {
+    /* background-color: #b0b0d2; */
+    text-indent: 20px;
+    width: 40%;
+    float: left;
+    text-transform: uppercase;
+}
+.author .about-author .social-links {
+    /* background-color: red; */
+    width: 60%;
+    text-align: right;
+    float: left;
+    list-style-type: none;
+}
+.author .about-author .social-links li{
+    display: inline-block;
+    margin-right: 10px;
+}
+.author div.line {
+    background-color: #d8d223;
+    margin: 7px auto;
+    width: 80%;
+    height: 2px;
+}
+.author .bio-author {
+    /* background-color: #b0b0d2; */
+    margin-left: 20px;
+    line-height: 1.3;
+    float: left;
+}
+/* tags div */
+/* .tags ul li {
+    border-radius: 10px;
+    padding: 7px;
+    color: black;
+    display: inline-block;
+    background-color: rgba(250, 235, 215, 0.543);
+} */
+.tag {
+    border-radius: 10px;
+    padding: 7px;
+    color: black;
+    display: inline-block;
+    background-color: rgba(248, 203, 144, 0.543);
+}
+.left-content .tags-blog {
+    /* padding: 7px 17px 0 33px; */
+    color: rgb(2, 158, 106);
+}
+.left-content .tags-blog::first-letter{
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+}
+.left-content .tag:nth-child(1) {
+    margin-left: 20px;
+}
+.left-content .tag {
+    /* padding: 7px 17px 0 33px; */
+    color: #9090e8;
+}
+
+/* Comment */
+.div-comment {
+    background: #f5f6f6;
+    border: 2px solid #d8d223;
+    color: #000000;
+    margin-top: 30px;
+}
+.div-comment .commenter {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.div-comment .commenter div.img {
+    /* background-color: #00ff7bcb; */ /* Try toggle (uncomment) this */
+    width: 10%;
+    float: left;
+}
+.div-comment div.img img {
+    width: 100%;
+}
+.commenter:hover {
+    outline: 2px solid rgb(255, 255, 255);
+    background-color: #adadd8;
+}
+.commenter .info {
+    /* background-color: red; */
+    width: 87.9%;
+    margin-left: 2.1%;
+    float: left;
+    position: relative;
+}
+.commenter .info a.reply {
+    color: rgb(74, 156, 238);
+    position: absolute;
+    right: 0px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+}
+.commenter .info .comnt-author{
+    display: inline-block;
+    margin-right: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.commenter .info .date{
+    color:#666668;
+    font-family:'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+}
+.commenter .info p.content-comment {
+    font-size: 17px;
+    width: 90%;
+}
+/* Reply Form */
+.form {
+    /* background-color: #9090e8; */
+    overflow: hidden;
+}
+.form input {
+    width: calc(98%/2);
+    padding: 10px;
+    border: none;
+    float: left;
+    margin-bottom: 10px;
+}
+.form input, .form textarea {
+    background-color: #f5f6f6;
+}
+.form input:nth-child(1) {margin-right: 2%;}
+.form textarea {
+    width: 100%;
+    height: 70px;
+    padding: 7px;
+    border: none;
+}
+.form input[type=submit] {
+    background-color: rgba(123, 27, 219, 0.699);/* first be like other input and then becomes purble and this wrong code, low performance*/
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Right content */
+section.content .right-content{
+    background-color: rgb(55, 48, 39);
+    float: left;
+    width: 20%;
+}
+section.content .right-content div.search{
+    padding: 7px;
+}
+section.content .right-content div.search input[type=search]{
+    margin-bottom: 20px;
+    color: aliceblue;
+    width: 100%;
+    padding: 10px 5px;
+    background-color: rgba(132, 130, 130, 0.525);
+    background-image: url("https://cdn-icons.flaticon.com/png/512/3031/premium/3031293.png?token=exp=1651242661~hmac=53e403b5e71b46cfe8628c3e1fa572b9");
+    background-size: 25px;
+    background-position: 95%;
+    background-repeat: no-repeat;
+}
+div.search input[type=search]::selection {
+    background-color: rgba(57, 52, 52, 0.545);
+}
+/* category div */
+div.category ul.categories {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+div.category ul.categories li{
+    color: rgb(63, 102, 200);
+    margin-left: 7px;
+    margin-bottom: 10px;
+}
+/* popular posts */
+ul.popular-posts {
+}
+.popular .popular-posts li .contents-post {
+    font-size: 0px; /* there is tiny line aqua under image i can't delete it*/
+    background-color: rgb(0, 255, 255);
+    overflow: hidden;
+}
+.popular .popular-posts li .contents-post .img-blog {
+    width: 40%;
+    height: 100%;
+    /* display: inline-block; */
+    float: left;
+}
+.popular .popular-posts li .contents-post .img-blog img {
+    width: 100%;
+}
+.popular .popular-posts {
+    list-style-type: none;
+}
+.popular .popular-posts li {
+    margin: 17px 0px;
+}
+.popular .popular-posts li .contents-post .content-post {
+    font-size: 1rem;
+    background-color: rgb(127, 127, 127);
+    /* display: inline-block; */
+    float: left;
+    width: 60%;
+    padding: 11px;
+}

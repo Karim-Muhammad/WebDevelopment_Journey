@@ -1,0 +1,44 @@
+.offer-content-box {overflow: hidden;}
+.offer .container .offer-content-box {
+    background-color: var(--darkMainColor);
+    width: calc(90%/3);
+    overflow: hidden;
+    padding: 7px;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    position: relative;
+}
+.offer .container .offer-content .offer-content-box:nth-child(3n) {margin: 0px;}
+.offer .container .offer-content-box .icon-offer {
+    margin-top: 1px;
+    color: var(--lightMainColor);
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    font-size: 32px ;
+
+}
+.offer .container .offer-content-box .offer-content-box-content {
+    width: 80%;
+    float: left;
+}
+.offer-content-box-content .title-box {
+    color: var(--lightMainColor);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    transition: color 1s;
+}
+.offer-content-box-content:hover .title-box {
+    color: #111;
+}
+.offer-content-box-content .describtion-box-offer {
+    line-height: 1.6;
+    color: #FFF;
+}
+.offer-content-box-content .describtion-box-offer::first-letter {
+    font-size: 30px;
+    letter-spacing: 2px;
+}

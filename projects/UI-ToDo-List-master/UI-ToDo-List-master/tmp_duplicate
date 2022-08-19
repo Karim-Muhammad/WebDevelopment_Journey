@@ -1,0 +1,16 @@
+
+// alogithm for duplicate function
+function duplicate() {
+    let isDuplicate;
+    tasks.forEach((task)=> {
+        if(task === input.value) {
+            isDuplicate = true;
+            return isDuplicate;
+        }else {
+            isDuplicate = false;
+            return isDuplicate;
+        }
+    })
+    return isDuplicate || false;
+
+}

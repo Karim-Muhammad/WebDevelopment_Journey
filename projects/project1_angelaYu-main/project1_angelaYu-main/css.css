@@ -1,0 +1,186 @@
+* {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+body {
+  /* font-family: fantasy; */
+}
+a {
+  text-decoration: none;
+  color: #11999E;
+}
+h2 {
+  font-size: 2rem;
+  color: #11999E;
+}
+h3 {
+  color: #11999E;
+}
+hr {
+  border-style: dotted;
+  border-top-width: 10px;
+  width: 100px;
+  margin: 20px auto;
+}
+.main {
+  font-family: 'DynaPuff', cursive;
+  background-color: #36e9a8;
+  position:relative;
+  width:100vw;
+  height: 100vh;
+}
+.cloud {
+  width: 250px;
+  position: absolute;
+  transform:scale(0.7);
+}
+.cloud.cl-r {
+  right: 100px;
+  top: 0px;
+}
+.cloud.cl-l {
+  left: 100px;
+  bottom: 0px;
+}
+.mountain {
+  display: block;
+  width:500px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform:translateX(-50%);
+}
+
+.me {
+  text-align:center;
+  width: fit-content;
+  /* margin: 100px auto; */
+  padding-top: 200px;
+  margin: 0 auto;
+}
+.me h1 {
+  /* color: #000; */
+  color: #ffffff;
+  /* color: orange; */
+
+  font-size: 2.5rem;
+}
+
+.me h2 {
+  color: orange;
+  /* color: #e9e521; */
+  transform: rotateZ(-7deg);
+  font-style:italic;
+}
+.me h2:hover {
+  transform: rotateZ(0deg)
+}
+
+.whoI {
+  width: 50%;
+  margin: 10px auto;
+  font-family: Arial, sans-serif;
+  padding: 10px 0;
+  text-align: center;
+  line-height: 2;
+}
+.whoI img {
+  width: 200px;
+  border-radius: 50%;
+}
+.info .skills,
+.info .hobbies {
+  font-family: Arial, sans-serif;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.info .skills h2,
+.info .hobbies h2{
+  text-align:center;
+  margin-bottom: 20px;
+}
+.info .skills .skill,
+.info .hobbies .hobby {
+  margin: 10px auto;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.info .skills .skill img,
+.info .hobbies .hobby img{
+  width: 110px;
+  height: 110px;
+  border-radius: 100%;
+}
+.info .skills .skill h3,
+.info .hobbies .hobby h3 {
+  font-size: 1.5rem;
+}
+.info .skills .skill p,
+.info .hobbies .hobby p{
+  color: #333;
+}
+.info .skills .skill:nth-child(2n+1) .text,
+.info .hobbies .hobby:nth-child(2n+1) .text {
+  padding: 10px 10px 10px 30px;
+}
+.info .skills .skill:nth-child(2n) img,
+.info .hobbies .hobby:nth-child(2n) img {
+  order: 2;
+}
+.info .skills .skill:nth-child(2n) .text,
+.info .hobbies .hobby:nth-child(2n) .text{
+  order: 1;
+  padding: 10px 30px 10px;
+}
+.info .skills .skill h3,
+.info .hobbies .hobby h3 {
+  margin-bottom: 10px;
+}
+
+/* .info .skills .skill--one {} */
+/* .info .skills .skill--one {} */
+
+.info .skills img {
+  width: 200px;
+}
+.info .contact {
+  padding: 10px 0;
+  text-align:center;
+  line-height: 1.5;
+}
+.info .contact a {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  margin: 10px 0;
+  letter-spacing: 2px;
+  display: inline-block;
+  background-color: #e82a44;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #FFF;
+}
+.info .contact a:hover {
+  background-color: #11999E;
+
+}
+.footer {
+  background-color: #11999E;
+  color: #FFF;
+  padding: 20px;
+  text-align:center;
+  line-height: 2;
+}
+.footer a {
+  /* color: #33cc33; */
+  color: #00ff00;
+  margin: 0 10px;
+}
+.footer img {
+  width: 20px;
+}

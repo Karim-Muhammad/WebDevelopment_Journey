@@ -1,0 +1,71 @@
+section.prices {
+    background-color: var(--bg-color);
+}
+section.prices .types-of-price{
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+section.prices .types-of-price .price{
+    line-height: 2;
+    float: left;
+    width: calc(90%/3);
+    margin-right: 5%;
+    padding: 20px;
+    border: 2px solid #ffffff;
+    text-align: center;
+}
+section.prices .types-of-price .price:nth-child(3){
+    margin: 0px;
+}
+section.prices .types-of-price .price h3{
+    color: var(--mainColor);
+    font-size: 30px;
+    font-variant: small-caps;
+    margin-bottom: 10px;
+}
+section.prices .types-of-price .price h4{
+    width: 160px;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 10px;
+    border: 2px solid #FFF;
+    margin: auto; 
+    border-radius: 50%;
+    text-align: center;
+}
+section.prices .types-of-price .price h4 span{
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+section.prices .types-of-price .price ul{
+    margin-top: 20px;
+    list-style-type: none;
+}
+section.prices .types-of-price .price ul li{
+    margin-bottom: 10px;
+}
+section.prices .types-of-price .price ul li:nth-child(1) span {
+    background-color: red;
+}
+section.prices .types-of-price .price .purchase{
+    text-transform: capitalize;
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+    background-color: transparent;
+    outline: none;
+    color: var(--lightHackerColor);
+    font-size: 20px;
+    border: 1px solid #0F0;
+    box-shadow: 0 0px 5px 5px var(--hackerColor);
+    transition: box-shadow 1s , transform 1s;
+}
+section.prices .types-of-price .price .purchase:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+    box-shadow: 0 0px 5px 5px var(--lightHackerColor);
+}

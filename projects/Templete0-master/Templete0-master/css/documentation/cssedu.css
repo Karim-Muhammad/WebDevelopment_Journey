@@ -1,0 +1,779 @@
+/* common/ general styles */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    /* background-color: #373750; */
+    color: rgb(255, 255, 255);
+    font-size: 0px; /* this cause some problems , take care ! */
+}
+section .container {
+    font-size: 16px;
+}
+.clear {clear: both;}
+.overlay { /* writing '.home' before '.overlay', it is wrong becuase this class will be using after that more so don't specification */
+    position: absolute;
+    background-color: #16487755; /* 373750b7 */
+    width: 100vw;
+    height: 100vh;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn { /* Common */
+    border: 0px;
+    border-radius: 7px;
+    width: 170px;
+    height: 70px;
+    font-size: 1.1rem;
+    margin: 10px 0px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 120px;
+}
+section:nth-child(even) {
+    background-color: #F1F1F1;
+}
+div.section-header {
+    text-align: center;
+}
+div.section-header .section-title {
+    font-size: 3em; /* take care */
+    font-family: 'Times New Roman', serif;
+    text-transform: capitalize;
+    color: #7db1d6;
+}
+div.section-header .line {
+    display: block;
+    background-color: #7db1d6;
+    width: 70px;
+    height: 4px;
+    margin: 10px auto 80px;
+}
+/* effect box */
+.ltr-effect::after {
+    z-index: 20;
+    content: "";
+    display: block;
+    position: absolute;
+    /* top: 50%; // way 1
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(59, 83, 97, 0.609);
+    transition: width 0.5s;
+}
+.ltr-effect:hover::after {
+    width: 100%;
+}
+/* some built in styles */
+.pd-y {padding: 10px 0px;}
+.mg-b {margin-bottom: 10px;}
+/* header style */
+.header {
+    /* background-color: #373750; */
+    background-color: transparent;
+    position: fixed; /* now, the header below section.home without z-index to up */
+    z-index: 9999;
+    font-weight: 400;
+    width: 100%;
+}
+.header .container .logo-image {
+    width: 30%;
+    display: inline-block; /*should added here as well*/
+    /* background: rgb(120, 146, 120); */
+    vertical-align: middle;
+}
+.container .logo-image + ul {
+    list-style-type: none;
+    width: 70%;
+    /* margin-left: 170px; */
+    /* background: #44445a8f; */
+    display: inline-block; /*should added here*/
+    vertical-align: middle;
+    text-align: right;
+    font-size: 0px; /* to remove margin between inline-block elements */
+    margin-right: auto;
+}
+.header .container ul li {
+    padding: 0px 10px;
+    font-size: 20px;
+    display: inline-block;
+    /* background-color: rgb(88, 81, 70); */
+    border-radius: 7px;
+    transition: background 0.7s;
+}
+/* Simple Way
+.container ul li:hover {
+    background-color: #4a81a7;
+}
+*/
+/* another way with animation */
+.container ul li::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: #4a81a7;
+    transition: all 0.6s; /* YES, put transition here, no li */
+}
+.container ul li:hover::after {
+    width: 100%;
+}
+/* END Way */
+.container .active {
+    border-bottom: 2px solid #4a81a7;
+}
+.container ul li a {
+    display: block;
+    padding: 10px 7px;
+    color: azure;
+    text-decoration: none;
+}
+.blogs {
+    position: relative;
+}
+.blogs .blogs-dropdown li {
+    width: 100%;
+    text-align: center;
+}
+.blogs .blogs-dropdown {
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: opacity 1s;
+}
+.blogs:hover .blogs-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+/* 
+a:hover::after {
+    //border under li
+    content: "";
+    display: block;
+    margin-top: 4px;
+    width: 100%;
+    height: 2px;
+    background-color: aquamarine;
+}
+*/
+/* Home content style */
+.home {
+    background-image: url(https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    /* background-color: #373750; */ /* not new layer */
+    background-size: cover; /* CSS 3 */
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+/* used more [common]*/
+
+.home .home-content {
+    /* background-color: rgb(105, 105, 100); */
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
+}
+.home .home-content .home-content-title { /* not needed nesting in this case becuase you name descibtive name home parent then content parent title elemnt so not needed this nesting 20:00*/
+    color: #4a81a7;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3em;
+}
+.home-content-describtion {
+    color: azure;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    margin: 10px 0px;
+    font-style: italic;
+}
+.btn-get-start { /* for more sepecific nt general */
+    background-color: #4a81a7;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-right: 7px;
+}
+.btn-learn-more {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* Servieces content style */
+/*
+section.services {
+    background-image: url(https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*/
+/* Section Service */
+section.services .overlay { /*overlay of services especially*/
+    background-color: inherit;
+}
+
+section.services .overlay .container {
+    font-size: 16px; /* default root after i remove it in .container */
+}
+section.services .services-content {
+    color: white;
+    /* background-color: black; */
+    overflow: hidden;
+}
+.service-content-box {
+    text-align: center;
+    border: 2px solid rgb(208, 228, 228);
+    background-color: #5686A7;
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 1.3em;
+    width: calc(90%/3);
+    margin-right: 5%;
+    float: left;
+    position: relative;
+}
+
+.service-content-box:nth-child(3){
+    margin: 0px;
+}
+/* content text services */
+.service-content-box .fa {
+    color: #7DB1D6;
+    margin: 7px 0px;
+    font-size: 2em;
+}
+.service-content-box .service-title {
+    text-transform: capitalize;
+    margin-bottom: 7px;
+    font-size: 2em;
+}
+.service-content-box .service-desribtion {
+    line-height: 30px;
+}
+.service-content-box a {
+    margin: 7px 0px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #7DB1D6;
+}
+.services-content .quote {
+    font-size: 60px;
+    width: 70%;
+    margin: 0px auto;
+    color: black;
+}
+.services-content .quote p {text-align: center;}
+.services-content .quote .fa-quote-left {
+    /*margin-top:30px; */
+    color:#4a81a7;
+    text-align: left;
+    /* transform: rotate(45deg); */
+}
+.services-content .quote .fa-quote-right {
+    margin-top: -37px;
+    color:#4a81a7;
+    float: right; /* text-align: right;  Does not work!*/
+    /* transform: rotate(45deg); */
+}
+
+/* Blogs content style */
+/* section.blogs .container {
+    font-size: 16px;
+} */ 
+/* Problem : elements (boxes) sometimes go out from parent div */
+.blogs-content {
+    margin-top: -19px;
+}
+section.blogs div.blog-content-box {
+    /* background-color: #4a81a7; */
+    margin-bottom: 10px;
+    margin-right: 5%;
+    width: calc(90%/3);
+    /* display: inline-block; take care font-size of parent > (dnt wrk)! */
+    float: left;
+    text-align: center;
+    padding: 20px;
+}
+section.blogs div.blog-content-box img {
+    width: 100%;
+    height: 300px;
+}
+section.blogs div.blog-content-box:nth-child(3n) {margin: 0px;} /* Perfect */
+.blog-content-box {
+    position: relative;
+}
+.blog-content-box div.describe-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 25px;
+    background-color: rgba(112, 128, 144, 0.433);
+    color: #4a81a7;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s;
+}
+.blog-content-box:hover .describe-img{
+    opacity: 1;
+    visibility: visible;
+}
+.blog-content-box:hover .category,
+.blog-content-box:hover .blog-title,
+.blog-content-box:hover .hero-img i {
+    top: 0px;
+    opacity: 1;
+    visibility: visible;
+}
+.describe-img .hero-img {
+    /* background-color: #5686A7; */
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-img .category {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: #000000;
+    position: relative;
+    top: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.6s, opaicity 0.6s;
+    transition-delay: 0s;
+
+}
+/* .blog-content-box:hover .category {top: 0;} */
+.hero-img .blog-title {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative;
+    top: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s;
+    transition-delay: 0.2s;
+
+}
+/* .blog-content-box:hover .blog-title {top: 0;} */
+.hero-img .blog-describtion {
+    color: #7db1d6;
+}
+.hero-img a { /* FOCUS HERE (There perfect Techinique to center */
+    background-color: #00000051;
+    /* font-size: 20px; */
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.hero-img a i{
+    line-height: 40px; /* New Idea */ /* To center <i> within <a> and you give it height (x)px, you have to give <i> line-height: (x)px as well. */
+    font-size: 30px;
+    color: #4a81a7;
+    position: relative;
+    top: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s;
+    transition-delay: 0.2s;
+}
+/* .blog-content-box:hover .hero-img i {top: 0px;} */
+
+/* Equivalent */
+/* using i only not a
+.hero-img a i{
+    background-color: #000000;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+}
+*/
+
+/* offer Section */
+.offer-content-box {overflow: hidden;}
+.offer .container .offer-content-box {
+    background-color: #e8e8e8;
+    width: calc(90%/3);
+    overflow: hidden;
+    padding: 7px;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    position: relative;
+}
+.offer .container .offer-content .offer-content-box:nth-child(3n) {margin: 0px;}
+.offer .container .offer-content-box .icon-offer {
+    /* background-color: antiquewhite; */
+    margin-top: 1px;
+    color: #405b6f;
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    font-size: 32px ;
+
+}
+.offer .container .offer-content-box .offer-content-box-content {
+    /* background-color: antiquewhite; */
+    width: 80%;
+    float: left;
+}
+.offer-content-box-content .title-box {
+    color: #6fa5b1;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    transition: color 1s;
+}
+.offer-content-box-content:hover .title-box {
+    color: #111; /* Does not work ! */
+}
+.offer-content-box-content .describtion-box-offer {
+    line-height: 1.6;
+    color: #5f829c;
+}
+.offer-content-box-content .describtion-box-offer::first-letter {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+/* About content style */
+/* Why span.line does not align to left ? : was the reason margin:auto(general)*/
+.about .section-header {text-align: left;}
+.about .section-header .line {margin: 0px; margin-top: 15px;
+margin-left: 7px;
+}
+.about .about-content {
+    overflow: hidden; /* was cause me error in design */
+    color: #405b6f;
+    background-color: #000000;
+}
+.about .img-about-us {
+    text-align: right;
+    background-color: #0000aa;
+    width: 50%;
+    float: left;
+}
+.about .img-about-us img {
+    width: 100%;
+    height: 100%;
+}
+.about .img-about-us .switch-img {
+    list-style: none;
+    text-align: center;
+}
+.about .img-about-us .switch-img li{
+    border-radius: 7px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #e2e2e2;
+}
+.about .img-about-us .switch-img li.active{
+    background-color: #4a81a7;
+}
+.about .img-about-us .switch-img li:hover{
+    background-color: #4a81a7;
+}
+.about .content-about-skills {
+    line-height: 2;
+    height: 100%;
+    width: 50%;
+    background-color: #00aa00;
+    padding: 20px;
+    float: left;
+}
+.about .content-about-skills .about-describtion {
+    margin-bottom: 17px;
+}
+.about .content-about-skills .list-skills {
+    list-style-type: none;
+}
+.about .content-about-skills .list-skills li::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-size: cover;
+	background-image: url(https://img.icons8.com/fluency-systems-regular/344/check-all.png);
+	margin-right: 7px;
+}
+.about .content-about-skills .list-skills li:hover::before {
+	content: "";
+	background-image: url(https://img.icons8.com/ios-glyphs/344/check-all.png);
+	width: 15px;
+	height: 15px;
+}
+.about .content-about-skills .list-skills li::before {
+	content: "";
+	background-image: url(https://img.icons8.com/ios-glyphs/344/check-all.png);
+	width: 15px;
+	height: 15px;
+}
+/* .about .content-about-skills .list-skills {
+    list-style-image: url(https://img.icons8.com/color/344/check-all--v1.png);
+    width: 5px;
+    height: 5px;
+} */
+.about .about-content .content-about-skills ul { /* 2# way */
+    list-style-type: none;
+}
+.about .about-content .content-about-skills ul li {
+    width: 40%;
+}
+.about .about-content .content-about-skills ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.about .feature { /* 3# way */
+    font-size: 10px;
+    color: #FFF;
+    margin-top: 9px;
+    width: 100%;
+    /* background-color: #5686A7; */
+    padding: 10px;
+    /* float: left; */
+    margin-right: 2px;
+    /* font-size: 0px; */ /* play with this, Awesome */
+}
+.about .feature p {font-size: 12px; display:inline-block;}
+.about .feature i {font-size: 12px;}
+.switch-img ul li {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #405b6f;
+}
+/* Number content style */
+section.numbers {
+    width: 100%;
+    height: 50vh;
+    padding: 0;
+    /* position: relative; */
+    overflow: hidden;
+    /* background-color: #000000; */
+    background-image: url(../images/background/background2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+section.numbers .overlay {height: 50vh; }
+section.numbers .staticis-item {
+    margin-top: 25vh;
+    transform: translate(0%, -50%);
+    font-size: 32px;
+    text-align: center;
+    /* background: wheat; */
+    width: calc(90%/4);
+    float: left;
+    margin-right: calc(10%/4);
+}
+section.numbers .staticis-item:nth-child(4) {margin-right: 0px;}
+section.numbers .staticis-item i {
+    color: #ffffff9e;
+}
+section.numbers .staticis-item h4 {
+    color: #ffffffbb;
+    font-size: 40px;
+    font-weight: 700;
+}
+section.numbers .staticis-item p {
+    color: #ffffffa0;
+}
+/* ubuscribe style */
+section.prices {
+    background-color: #111;
+    /* color: #000000; */
+}
+section.prices .types-of-price{
+    /* background-color: #e1e; */
+    /* color: #fff; */
+    border: 2px solid #e1e1e1;
+    overflow: hidden;
+}
+section.prices .types-of-price .price{
+    line-height: 2;
+    float: left;
+    width: calc(90%/3);
+    margin-right: 5%;
+    padding: 20px;
+    /* background-color: #faf; */
+    /* color: #fff; */
+    border: 2px solid #e1e1e1;
+    text-align: center;
+}
+section.prices .types-of-price .price:nth-child(3){
+    margin: 0px;
+}
+section.prices .types-of-price .price h3{
+    color: #658aa7ab;
+    font-size: 30px;
+    font-variant: small-caps;
+    margin-bottom: 7px;
+}
+section.prices .types-of-price .price h4{
+    width: 160px;
+    /* height: 130px; */
+    padding: 20px;
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+    /* text-transform: capitalize; */
+    margin-bottom: 7px;
+    border: 2px solid #FFF;
+    margin: auto; 
+    border-radius: 50%;
+    text-align: center;
+}
+section.prices .types-of-price .price h4 span{
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+section.prices .types-of-price .price ul{
+    margin-top: 20px;
+    list-style-type: none;
+}
+section.prices .types-of-price .price ul li{
+    margin-bottom: 7px;
+}
+section.prices .types-of-price .price ul li:nth-child(1) span {
+    background-color: red;
+}
+section.prices .types-of-price .price .purchase{
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+    background-color: transparent;
+    outline: none;
+    color: #14a214ba;
+    font-size: 20px;
+    border: 1px solid #0F0;
+    box-shadow: 0 0px 5px 5px rgba(65, 154, 65, 0.653);
+    transition: box-shadow 1s , transform 1s;
+}
+section.prices .types-of-price .price .purchase:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+    box-shadow: 0 0px 5px 5px rgba(134, 240, 134, 0.653);
+}
+section.teams {
+    padding: 0px;
+    height: 50vh;
+    background-image: url(../images/background/background3.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+section.teams .overlay {
+    height: 50%;
+}
+section.teams .teams-content {
+    /* background-color: #ea0; */
+    /* margin: auto; */
+    position: relative;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, 50%);
+    overflow: hidden;
+}
+section.teams .one-of-team {
+    float: left;
+    background-color: #00000069;
+    padding: 10px;
+    width: calc(90%/2);
+    margin-right: 5%;
+}
+section.teams .one-of-team:nth-child(2) {margin:0px}
+.teams .profile {
+    overflow: hidden;
+    background-color: #b2bdc5a9;
+    margin-bottom: 20px;
+}
+section.teams .profile img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    float: left;
+}
+section.teams .profile img + * {
+    /* float:left; */
+    /* color: red; */
+}
+.teams .profile .about-profile {
+    /* height: 3rem; */
+    /* background-color: #5f829c; */
+    float: left;
+    /* display: inline-block;
+    align-items: center; */
+    /* margin: auto; */
+    /* transform: translate(0,50%); */
+}
+.teams .profile .author {
+    display: block;
+    color: green;
+    margin-top: 1.5rem;
+    /* margin-top: auto; not work*/
+}
+/* Team content style */
+
+/* Subscribe content style */
+
+
+/* Footer content style */
+
+/* blog page */
+
+/* فهرسة للتسهيل
+    1- Common Styles
+    2- General Styles
+    3- Sections Styles
+        3.0 Header Section
+            3.0.0 Logo
+            3.0.1 Links
+        3.1 Home Section
+            3.1.0 Image
+            3.1.1 Title
+            3.1.2 Describtion
+        3.2 Services Section
+            3.2.0 Images
+            3.2.1 Paragraph
+        3.3 Blogs Sections
+            ....
+        3.4 Team Sections
+        3.6 Subscribe Section
+        3.7 About Section
+        3.8 Footer Section
+*/

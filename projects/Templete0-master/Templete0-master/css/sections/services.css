@@ -1,0 +1,65 @@
+section.services .overlay {
+    background-color: inherit;
+}
+
+section.services .overlay .container {
+    font-size: 16px;
+}
+section.services .services-content {
+    color: white;
+    /* background-color: black; */
+    overflow: hidden;
+}
+.service-content-box {
+    text-align: center;
+    border: 2px solid rgb(208, 228, 228);
+    background-color: var(--darkMainColor);
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 1.3em;
+    width: calc(90%/3);
+    margin-right: 5%;
+    float: left;
+    position: relative;
+}
+
+.service-content-box:nth-child(3){
+    margin: 0px;
+}
+/* content text services */
+.service-content-box .fa {
+    color: var(--lightMainColor);
+    margin: 7px 0px;
+    font-size: 2em;
+}
+.service-content-box .service-title {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+.service-content-box .service-desribtion {
+    line-height: 30px;
+}
+.service-content-box a {
+    margin: 7px 0px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--lightMainColor);
+    z-index: 20;
+}
+.services-content .quote {
+    font-size: 60px;
+    width: 70%;
+    margin: 0px auto;
+    color: black;
+}
+.services-content .quote p {text-align: center;}
+.services-content .quote .fa-quote-left {
+    color:var(--darkMainColor);
+    text-align: left;
+}
+.services-content .quote .fa-quote-right {
+    margin-top: -37px;
+    color:var(--darkMainColor);
+    float: right;
+}

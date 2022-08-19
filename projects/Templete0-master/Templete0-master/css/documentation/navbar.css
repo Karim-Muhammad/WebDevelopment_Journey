@@ -1,0 +1,8 @@
+.navbar {
+    background-color: burlywood;
+}
+.navbar h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
